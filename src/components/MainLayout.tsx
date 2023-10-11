@@ -11,16 +11,16 @@ export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <div className="container mx-auto">
-      <nav className="py-10 flex justify-between px-10">
+      <nav className="pt-10 pb-0 sm:pt-10 sm:pb-10 flex flex-col sm:flex-row justify-between px-10">
         <h1 className="text-3xl">Fav<span className="font-bold">Movies</span></h1>
-        <ul className="flex items-center">
+        <ul className="flex items-center justify-center mt-10 sm:mt-0">
           {routes.map((route, index) => (
             route.showInsideNav 
               ? <NavLink
                 key={index}
                 to={route.href}
                 className={
-                  "text-xl font-bold ml-10 hover:underline " + (
+                  "text-xl font-bold ml-5 mr-5 sm:mr-0 sm:ml-10 hover:underline " + (
                     location.pathname === route.href
                       ? "text-amber-400"
                       : "text-gray-500"

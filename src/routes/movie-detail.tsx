@@ -59,7 +59,7 @@ export const MovieDetail: FC = () => {
 
   return (
     movie
-      ? <div className="grid grid-cols-10 pb-20">
+      ? <div className="grid grid-cols-10 pb-20 pt-10">
         <div className="col-span-10 md:col-span-5 lg:col-span-3 flex justify-center">
           <img src={IMAGE_BASE_URL + movie.poster_path} alt={movie?.title} />
         </div>
